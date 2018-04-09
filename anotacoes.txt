@@ -1,0 +1,5 @@
+// pegar shell do container
+docker exec -it <container> bash
+
+// limplar containers e imagens
+docker system prune
