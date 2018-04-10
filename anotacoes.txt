@@ -3,3 +3,12 @@ docker exec -it <container> bash
 
 // limplar containers e imagens
 docker system prune
+
+// mostrar o que alterou no container em relação à imagem
+docker diff <container>
+
+/ volume por meio de bind
+docker run -d --mount type=bind,source=$(pwd)/data,target=/var/www/html nginx:alpine
+
+/ verificação do uso de discos
+docker system df
