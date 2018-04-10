@@ -12,3 +12,8 @@ docker run -d --mount type=bind,source=$(pwd)/data,target=/var/www/html nginx:al
 
 / verificação do uso de discos
 docker system df
+
+// criação do container com dois volumes (um com named volumes e o outro com bind)
+docker run -d --name aula-2 --mount type=volume,source=aula2-volumes,target=/tmp --mount type=bind,source=$(pwd),target=/urs/src/ -p 5000:5000 oficina-docker:aula2-volumes
+
+
